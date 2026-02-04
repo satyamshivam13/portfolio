@@ -1,0 +1,185 @@
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+
+const Hero = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const titleRef = useRef<HTMLParagraphElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const socialsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Timeline for entrance animations
+      const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
+
+      // Name character decode animation
+      if (nameRef.current) {
+        const chars = nameRef.current.querySelectorAll('.char');
+        tl.fromTo(
+          chars,
+          { opacity: 0, y: 50, rotateX: -90 },
+          { opacity: 1, y: 0, rotateX: 0, duration: 0.8, stagger: 0.03 },
+          0.2
+        );
+      }
+
+      // Title slide up
+      tl.fromTo(
+        titleRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8 },
+        0.6
+      );
+
+      // Description fade in
+      tl.fromTo(
+        descRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8 },
+        0.8
+      );
+
+      // CTA buttons
+      tl.fromTo(
+        ctaRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6 },
+        1.2
+      );
+
+      // Social links
+      tl.fromTo(
+        socialsRef.current?.children || [],
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 },
+        1.4
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  // Split name into characters
+  const name = 'Satyam';
+  const nameChars = name.split('').map((char, i) => (
+    <span
+      key={i}
+      className="char inline-block"
+      style={{ display: char === ' ' ? 'inline' : 'inline-block' }}
+    >
+      {char === ' ' ? '\u00A0' : char}
+    </span>
+  ));
+
+  const scrollToProjects = () => {
+    document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section
+      ref={containerRef}
+      className="min-h-screen flex items-center justify-center relative px-6 py-20"
+    >
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="flex justify-center">
+          {/* Content */}
+          <div className="max-w-4xl text-center">
+            {/* Greeting */}
+            <p className="text-[#00ff9d] text-sm font-medium tracking-wider uppercase mb-4">
+              Hello, I'm
+            </p>
+
+            {/* Name */}
+            <h1
+              ref={nameRef}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-['Space_Grotesk'] text-white mb-6"
+              style={{ perspective: '1000px' }}
+            >
+              {nameChars}
+            </h1>
+
+            {/* Title */}
+            <p
+              ref={titleRef}
+              className="text-xl sm:text-2xl md:text-3xl text-gradient font-['Space_Grotesk'] font-medium mb-6"
+            >
+              AI/ML Engineer & Backend Developer
+            </p>
+
+            {/* Description */}
+            <p
+              ref={descRef}
+              className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8 px-4"
+            >
+              I love building smart systems that actually work. From creating AI chatbots to 
+              designing backend pipelines, I turn complex ML models into practical solutions. 
+              Let's make AI useful, not just impressive.
+            </p>
+
+            {/* CTA Buttons */}
+            <div ref={ctaRef} className="flex flex-wrap gap-4 justify-center mb-10 px-4">
+              <button
+                onClick={scrollToProjects}
+                className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-[#00ff9d] text-[#0a0a0a] font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,157,0.4)] text-sm sm:text-base"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  Explore My Work
+                  <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform" />
+                </span>
+              </button>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-6 py-3 sm:px-8 sm:py-4 border border-white/20 text-white font-semibold rounded-lg hover:border-[#00ff9d] hover:text-[#00ff9d] transition-all duration-300 text-sm sm:text-base"
+              >
+                Get In Touch
+              </a>
+            </div>
+
+            {/* Social Links */}
+            <div ref={socialsRef} className="flex gap-4 justify-center">
+              <a
+                href="https://github.com/satyamshivam13"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00ff9d] hover:border-[#00ff9d] hover:bg-[#00ff9d]/10 transition-all duration-300"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/usersatyam/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#0080ff] hover:border-[#0080ff] hover:bg-[#0080ff]/10 transition-all duration-300"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="mailto:shivamsatyam35@gmail.com"
+                className="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00ff9d] hover:border-[#00ff9d] hover:bg-[#00ff9d]/10 transition-all duration-300"
+              >
+                <Mail size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500">
+        <span className="text-xs tracking-wider">SCROLL</span>
+        <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center pt-2">
+          <div className="w-1 h-2 bg-[#00ff9d] rounded-full animate-bounce" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
