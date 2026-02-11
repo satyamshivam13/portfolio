@@ -71,37 +71,37 @@ const Skills = () => {
       title: 'Languages',
       icon: Code2,
       color: '#00ff9d',
-      skills: ['Python', 'JavaScript', 'SQL', 'HTML/CSS'],
+      skills: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML/CSS'],
     },
     {
       title: 'AI & LLM',
       icon: Brain,
       color: '#0080ff',
-      skills: ['RAG', 'Multi-Agent Systems', 'Embeddings', 'Prompt Engineering', 'LLM APIs'],
+      skills: ['RAG', 'Multi-Agent Systems', 'Embeddings', 'Prompt Engineering', 'LLM APIs', 'LangChain'],
     },
     {
       title: 'Backend',
       icon: Server,
       color: '#00ff9d',
-      skills: ['FastAPI', 'REST APIs', 'Node.js', 'Microservices'],
+      skills: ['FastAPI', 'REST APIs', 'Node.js', 'Microservices', 'Express'],
     },
     {
       title: 'Databases',
       icon: Database,
       color: '#0080ff',
-      skills: ['FAISS', 'Vector DBs', 'PostgreSQL', 'MongoDB'],
+      skills: ['FAISS', 'Vector DBs', 'PostgreSQL', 'MongoDB', 'Pinecone'],
     },
     {
       title: 'ML & Data',
       icon: BarChart3,
       color: '#00ff9d',
-      skills: ['Scikit-learn', 'Pandas', 'NumPy', 'Data Analysis'],
+      skills: ['Scikit-learn', 'Pandas', 'NumPy', 'Data Analysis', 'NLP'],
     },
     {
       title: 'DevOps & Cloud',
       icon: Cloud,
       color: '#0080ff',
-      skills: ['Docker', 'AWS', 'Git', 'CI/CD'],
+      skills: ['Docker', 'AWS', 'Git', 'CI/CD', 'Linux'],
     },
   ];
 
