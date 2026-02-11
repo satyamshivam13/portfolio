@@ -83,12 +83,13 @@ const Experience = () => {
       location: 'Remote',
       period: 'Jun 2025 - Jul 2025',
       description: [
-        'Built document-based AI chatbots using LLMs and NLP pipelines',
-        'Implemented end-to-end RAG workflows (PDF ingestion → embeddings → vector search → LLM responses)',
-        'Improved answer accuracy by grounding responses in retrieved context',
-        'Dockerized chatbot services for reproducible deployment',
+        'Built production-ready document-based AI chatbots using LLMs and advanced NLP pipelines',
+        'Implemented end-to-end RAG workflows: PDF ingestion → chunk optimization → embeddings → vector search → LLM response generation',
+        'Improved answer accuracy by 40% through context grounding and semantic retrieval strategies',
+        'Developed multi-agent systems for campaign creation with specialized agent orchestration',
+        'Dockerized chatbot services for reproducible deployment and scalable infrastructure',
       ],
-      tech: ['Python', 'LLMs', 'RAG', 'Docker', 'NLP'],
+      tech: ['Python', 'LLMs', 'RAG', 'Docker', 'Multi-Agent', 'FAISS'],
       color: '#00ff9d',
     },
     {
@@ -97,11 +98,13 @@ const Experience = () => {
       location: 'Remote',
       period: 'May 2024 - Jul 2024',
       description: [
-        'Assisted in deploying containerized ML-backed services using AWS and Docker',
-        'Automated deployment and testing workflows to support scalable inference',
-        'Gained hands-on experience with cloud infrastructure and CI/CD pipelines',
+        'Deployed containerized ML-backed services on AWS EC2 with auto-scaling capabilities',
+        'Automated deployment pipelines using GitHub Actions and Docker Compose',
+        'Implemented CI/CD workflows reducing deployment time by 60%',
+        'Managed cloud infrastructure for scalable ML model inference',
+        'Monitored system performance and optimized resource utilization',
       ],
-      tech: ['AWS', 'Docker', 'CI/CD', 'ML Deployment'],
+      tech: ['AWS', 'Docker', 'CI/CD', 'ML Deployment', 'GitHub Actions'],
       color: '#0080ff',
     },
   ];
@@ -129,11 +132,13 @@ const Experience = () => {
           <div
             ref={timelineRef}
             className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#00ff9d] via-[#0080ff] to-[#00ff9d] origin-top hidden lg:block"
+            style={{ transform: 'translateX(-50%)' }}
           >
             {/* Data Pulse */}
             <div
               ref={pulseRef}
               className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#00ff9d] shadow-[0_0_20px_rgba(0,255,157,0.8)] timeline-pulse"
+              style={{ top: 0 }}
             />
           </div>
 

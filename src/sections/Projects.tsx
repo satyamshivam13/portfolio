@@ -40,7 +40,7 @@ const Projects = () => {
     {
       title: 'Multi-Agent Campaign Creator',
       description: 'Advanced multi-agent AI system for creating marketing campaigns. Leverages multiple specialized agents to generate, optimize, and coordinate campaign strategies.',
-      image: '/project-multi-agent.jpg',
+      image: '/project-rag.jpg',
       tech: ['Python', 'Multi-Agent System', 'LLM', 'AI Orchestration'],
       github: 'https://github.com/satyamshivam13/Multi_Agent_Campaign_Creator',
       featured: true,
@@ -49,7 +49,7 @@ const Projects = () => {
     {
       title: 'RAG Pipeline',
       description: 'Production-ready Retrieval Augmented Generation pipeline. Implements advanced document processing, vector storage, and intelligent retrieval for LLM applications.',
-      image: '/project-rag-pipeline.jpg',
+      image: '/project-rag.jpg',
       tech: ['Python', 'RAG', 'Vector DB', 'Embeddings'],
       github: 'https://github.com/satyamshivam13/RAG_Pipeline',
       featured: true,
@@ -61,25 +61,7 @@ const Projects = () => {
       image: '/project-syntax.jpg',
       tech: ['Python', 'LLM APIs', 'Code Analysis', 'Jupyter'],
       github: 'https://github.com/satyamshivam13/HybridAI_Syntax_Error_Detection',
-      featured: false,
-      color: '#00ff9d',
-    },
-    {
-      title: 'Binance Futures Testnet',
-      description: 'Trading bot system for Binance Futures testnet. Implements algorithmic trading strategies with risk management and backtesting capabilities.',
-      image: '/project-binance.jpg',
-      tech: ['Python', 'Trading Bot', 'Binance API', 'Crypto'],
-      github: 'https://github.com/satyamshivam13/Binance_Futures_Testnet',
-      featured: false,
-      color: '#0080ff',
-    },
-    {
-      title: 'API Video Application',
-      description: 'Full-featured video API application. Provides video processing, streaming, and management capabilities through a REST API.',
-      image: '/project-video.jpg',
-      tech: ['JavaScript', 'Node.js', 'Video API', 'REST'],
-      github: 'https://github.com/satyamshivam13/Api_Video_app',
-      featured: false,
+      featured: true,
       color: '#00ff9d',
     },
     {
@@ -88,8 +70,17 @@ const Projects = () => {
       image: '/project-rag.jpg',
       tech: ['Python', 'FAISS', 'Embeddings', 'LLM APIs'],
       github: 'https://github.com/satyamshivam13/PDF_RAG_Chatbot',
-      featured: false,
+      featured: true,
       color: '#0080ff',
+    },
+    {
+      title: 'LLM Plagiarism Checker',
+      description: 'LLM-based system to analyze semantic similarity between documents. Goes beyond simple text matching to understand meaning and context.',
+      image: '/project-plagiarism.jpg',
+      tech: ['Python', 'NLP', 'Semantic Analysis', 'LLM'],
+      github: 'https://github.com/satyamshivam13/LLM_Plagiarism_Checker',
+      featured: false,
+      color: '#00ff9d',
     },
     {
       title: 'Customer Churn Prediction',
@@ -97,15 +88,6 @@ const Projects = () => {
       image: '/project-churn.jpg',
       tech: ['Python', 'Scikit-learn', 'Pandas', 'ML'],
       github: 'https://github.com/satyamshivam13/Customer_Churn_Prediction',
-      featured: false,
-      color: '#00ff9d',
-    },
-    {
-      title: 'AI Weather Agent',
-      description: 'Intelligent weather forecasting agent that provides personalized weather insights and recommendations using AI.',
-      image: '/project-weather.jpg',
-      tech: ['Python', 'AI Agent', 'Weather API', 'ML'],
-      github: 'https://github.com/satyamshivam13/AI_Weather_Agent',
       featured: false,
       color: '#0080ff',
     },
@@ -176,11 +158,16 @@ const Projects = () => {
               onMouseLeave={handleMouseLeave}
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
                 />
                 
                 {/* Overlay */}

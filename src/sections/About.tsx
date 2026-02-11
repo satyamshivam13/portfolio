@@ -79,7 +79,7 @@ const About = () => {
       title: 'Education',
       content: 'B.Tech AI & ML',
       subcontent: 'United Institute of Technology',
-      detail: 'CGPA: 7.05',
+      detail: 'Graduating 2026',
       color: '#00ff9d',
     },
     {

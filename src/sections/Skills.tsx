@@ -71,37 +71,37 @@ const Skills = () => {
       title: 'Languages',
       icon: Code2,
       color: '#00ff9d',
-      skills: ['Python', 'SQL', 'JavaScript', 'HTML/CSS'],
+      skills: ['Python', 'JavaScript', 'SQL', 'HTML/CSS'],
     },
     {
-      title: 'LLM & NLP',
+      title: 'AI & LLM',
       icon: Brain,
       color: '#0080ff',
-      skills: ['RAG', 'Embeddings', 'Prompt Engineering', 'Semantic Search', 'Context Grounding'],
+      skills: ['RAG', 'Multi-Agent Systems', 'Embeddings', 'Prompt Engineering', 'LLM APIs'],
     },
     {
       title: 'Backend',
       icon: Server,
       color: '#00ff9d',
-      skills: ['FastAPI', 'REST APIs', 'Modular Pipelines', 'LLM Integration'],
+      skills: ['FastAPI', 'REST APIs', 'Node.js', 'Microservices'],
     },
     {
-      title: 'Vector DBs',
+      title: 'Databases',
       icon: Database,
       color: '#0080ff',
-      skills: ['FAISS', 'Document Chunking', 'Retrieval Strategies'],
+      skills: ['FAISS', 'Vector DBs', 'PostgreSQL', 'MongoDB'],
     },
     {
-      title: 'Data & ML',
+      title: 'ML & Data',
       icon: BarChart3,
       color: '#00ff9d',
-      skills: ['Pandas', 'Scikit-learn', 'Semantic Similarity', 'Document ML'],
+      skills: ['Scikit-learn', 'Pandas', 'NumPy', 'Data Analysis'],
     },
     {
       title: 'DevOps & Cloud',
       icon: Cloud,
       color: '#0080ff',
-      skills: ['Docker', 'AWS EC2', 'Git', 'GitHub', 'CI/CD'],
+      skills: ['Docker', 'AWS', 'Git', 'CI/CD'],
     },
   ];
 
@@ -201,11 +201,11 @@ const Skills = () => {
             {/* Floating Skills */}
             <div className="relative w-full h-full">
               {allSkills.map((skill, i) => {
-                // Calculate position in a scattered pattern
-                const row = Math.floor(i / 6);
-                const col = i % 6;
-                const x = 10 + col * 15 + Math.random() * 5;
-                const y = 15 + row * 25 + Math.random() * 10;
+                // Simple scattered positioning
+                const row = Math.floor(i / 5);
+                const col = i % 5;
+                const x = 15 + col * 18 + (Math.random() - 0.5) * 8;
+                const y = 20 + row * 30 + (Math.random() - 0.5) * 10;
 
                 return (
                   <div
@@ -244,10 +244,12 @@ const Skills = () => {
               { icon: GitBranch, label: 'Git' },
               { icon: Box, label: 'Docker' },
               { icon: Cloud, label: 'AWS' },
-              { icon: Database, label: 'PostgreSQL' },
-              { icon: Layers, label: 'FAISS' },
+              { icon: Database, label: 'MongoDB' },
+              { icon: Layers, label: 'Postman' },
               { icon: Cpu, label: 'Jupyter' },
               { icon: Workflow, label: 'Linux' },
+              { icon: Brain, label: 'OpenAI' },
+              { icon: Server, label: 'FastAPI' },
             ].map((tool, i) => (
               <div
                 key={i}
