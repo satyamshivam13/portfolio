@@ -127,11 +127,10 @@ const Hero = () => {
             {/* Description */}
             <p
               ref={descRef}
-              className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8 px-4"
+              className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8 px-4"
             >
-              I love building smart systems that actually work. From creating AI chatbots to 
-              designing backend pipelines, I turn complex ML models into practical solutions. 
-              Let's make AI useful, not just impressive.
+              I bridge the gap between complex ML models and production servers. From creating context-aware RAG pipelines to orchestrating multi-agent AI campaigns, I turn data into scalable, practical software. 
+              <span className="block mt-2 text-[#00ff9d]">Let's build systems that actually work.</span>
             </p>
 
             {/* CTA Buttons */}
@@ -146,14 +145,12 @@ const Hero = () => {
                 </span>
               </button>
               <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 sm:px-8 sm:py-4 border border-white/20 text-white font-semibold rounded-lg hover:border-[#00ff9d] hover:text-[#00ff9d] transition-all duration-300 text-sm sm:text-base"
               >
-                Get In Touch
+                Download Resume
               </a>
             </div>
 
@@ -181,6 +178,26 @@ const Hero = () => {
               >
                 <Mail size={20} />
               </a>
+            </div>
+
+            {/* Recruiter Quick-Scan Block */}
+            <div className="mt-12 p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm max-w-3xl mx-auto text-left hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 animate-in fade-in duration-1000 delay-500">
+              <div>
+                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wider font-semibold">Role</p>
+                <p className="text-white text-sm font-medium">AI/ML Engineer</p>
+              </div>
+              <div>
+                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wider font-semibold">Experience</p>
+                <p className="text-white text-sm font-medium">1+ Years</p>
+              </div>
+              <div>
+                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wider font-semibold">Stack</p>
+                <p className="text-[#00ff9d] text-sm font-medium">Python, React, AWS</p>
+              </div>
+              <div>
+                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wider font-semibold">Availability</p>
+                <p className="text-white text-sm font-medium">Remote / Global</p>
+              </div>
             </div>
           </div>
         </div>

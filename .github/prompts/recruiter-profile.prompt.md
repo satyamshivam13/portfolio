@@ -1,53 +1,93 @@
 ---
-name: Recruiter-Memorized Profile
-description: Create a unique, high-conversion developer profile for portfolio, resume, and LinkedIn that recruiters remember.
-argument-hint: Target role, years of experience, tech stack, strongest projects, and desired companies
+name: World-Class Portfolio Architect
+description: Build a world-class portfolio strategy with elite design direction, content system, UX, SEO, performance, and execution plan.
+argument-hint: Role target, audience, projects, style direction, and constraints
 agent: agent
 ---
-Create a recruiter-magnet profile package from the user input.
+Design and content a complete world-class personal portfolio blueprint from the user input.
 
 Primary goal:
-Transform plain profile details into a sharp, differentiated positioning statement that feels credible, specific, and memorable in under 15 seconds of reading.
+Create a high-conversion portfolio strategy that is visually distinctive, fast, credible, and memorable to recruiters or clients within the first 10 to 20 seconds.
 
-Input you should use:
-- Target role and level (example: Frontend Developer, Full Stack Engineer, AI Engineer)
-- Core stack and tools
-- 2 to 4 strongest projects with measurable outcomes
-- Domain strengths (example: fintech, edtech, SaaS)
-- Preferred company type (startup, product, enterprise, remote-first)
-- Tone (confident, premium, practical, technical)
+Input to collect first:
+- Target role and seniority
+- Primary audience (recruiters, founders, hiring managers, clients)
+- Core stack and domain strengths
+- 3 to 6 flagship projects with outcomes
+- Personal brand traits (example: bold, premium, technical, minimalist)
+- Geographic and hiring target (remote, India, global, specific city)
+- Constraints (timeline, no redesign, content-only, or full rebuild)
 
-If the input is incomplete, ask only the minimum missing questions first. Then generate the full package.
+If any critical input is missing, ask only the smallest set of clarifying questions, then proceed.
 
 Output format:
-1. Positioning headline (6 to 12 words)
-2. One-line hook (single sentence, high-impact, non-generic)
-3. 80-word profile summary (results-first, no buzzword stuffing)
-4. Recruiter scan block:
-   - Years and focus
-   - Core stack
-   - Notable outcomes (3 bullets with metrics)
-   - Differentiator sentence
-5. Portfolio hero copy:
-   - Hero title
-   - Hero subtitle
-   - Primary CTA text
-   - Secondary CTA text
-6. LinkedIn About section (120 to 180 words)
-7. Resume summary (3 to 4 lines, ATS-friendly)
-8. Signature proof bullets (5 bullets with action + metric + business impact)
-9. 3 stylistic variants:
-   - Bold
-   - Premium
-   - Minimal
+1. Brand strategy:
+   - Positioning statement
+   - Value proposition
+   - Audience promise
+   - Differentiation against typical portfolios
+
+2. Creative direction:
+   - Visual concept name and rationale
+   - Typography direction
+   - Color system with practical token suggestions
+   - Motion principles
+   - Imagery and texture style
+   - Do and do-not design rules
+
+3. Information architecture:
+   - Final section map and page order
+   - Navigation labels
+   - Recommended section goals and conversion purpose
+   - Mobile-first behavior notes
+
+4. Content system:
+   - Hero copy (title, subtitle, primary CTA, secondary CTA)
+   - About narrative
+   - Experience storytelling format
+   - Project case-study template
+   - Skills presentation strategy
+   - Testimonials and social proof structure
+   - Contact section copy focused on conversion
+
+5. Signature assets:
+   - 5 memorable profile lines
+   - 5 proof bullets with metric and business impact
+   - Recruiter quick-scan block
+   - Resume summary version
+   - LinkedIn About version
+
+6. UX and interaction plan:
+   - First impression sequence (0 to 20 seconds)
+   - Scroll narrative and reveal timing
+   - Micro-interactions that add meaning
+   - Accessibility requirements (contrast, focus, keyboard, reduced motion)
+
+7. Technical excellence checklist:
+   - Performance targets (LCP, CLS, INP)
+   - SEO essentials (metadata, schema, headings, internal links)
+   - Semantic HTML and accessibility baseline
+   - Asset optimization strategy
+   - Analytics events to track conversion
+
+8. Execution roadmap:
+   - 3 phases (quick wins, core build, polish)
+   - Priority tasks for each phase
+   - Estimated effort per phase
+   - Risk and mitigation notes
+
+9. Ready-to-implement output:
+   - Suggested updates for portfolio sections
+   - Exact revised copy blocks
+   - Component-level improvement ideas for a React and Tailwind project
 
 Quality rules:
-- Avoid cliches such as passionate, hardworking, team player, quick learner.
-- Prefer evidence over adjectives.
-- Keep language simple, direct, and recruiter-friendly.
-- Every major claim should be backed by proof, metric, or clear scope.
-- Do not invent achievements. If evidence is missing, mark with [needs metric].
-- Make the profile sound human and distinctive, not generic AI output.
+- Be specific, not generic.
+- Do not invent achievements; mark missing evidence with [needs metric].
+- Prioritize measurable outcomes over adjectives.
+- Keep writing concise and high-trust.
+- Ensure recommendations are realistic for modern web standards.
+- Avoid trend-chasing visuals that hurt clarity or performance.
 
-Final check:
-At the end, include a short section named Improvement Opportunities with up to 5 gaps that, if filled, will significantly improve recruiter response rate.
+Final section:
+Include Portfolio Scorecard with 10 criteria scored out of 10, then list Top 7 upgrades with maximum hiring impact.
