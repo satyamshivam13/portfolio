@@ -36,15 +36,16 @@ const Experience = () => {
           
           gsap.fromTo(
             card,
-            { opacity: 0, x: direction },
+            { opacity: 0, x: direction, scale: 0.95 },
             {
               opacity: 1,
               x: 0,
-              duration: 0.8,
-              ease: 'expo.out',
+              scale: 1,
+              duration: 1,
+              ease: 'power3.out',
               scrollTrigger: {
                 trigger: card,
-                start: 'top 80%',
+                start: 'top 85%',
                 toggleActions: 'play none none reverse',
               },
             }

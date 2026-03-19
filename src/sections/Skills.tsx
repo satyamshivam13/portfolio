@@ -77,7 +77,7 @@ const Skills = () => {
       title: 'AI & LLM',
       icon: Brain,
       color: '#0080ff',
-      skills: ['RAG', 'Multi-Agent Systems', 'Embeddings', 'Prompt Engineering', 'LLM APIs', 'LangChain'],
+      skills: ['RAG', 'Agentic AI', 'CrewAI', 'Embeddings', 'Prompt Engineering', 'LangChain'],
     },
     {
       title: 'Backend',
@@ -217,7 +217,7 @@ const Skills = () => {
                       backgroundColor: `${skill.color}20`,
                       border: `1px solid ${skill.color}40`,
                       color: skill.color,
-                      animation: `skill-float ${getRandomDuration()}s ease-in-out infinite`,
+                      animation: `skill-float ${getRandomDuration()}s ease-in-out infinite alternate`,
                       animationDelay: `${getRandomDelay()}s`,
                     }}
                   >

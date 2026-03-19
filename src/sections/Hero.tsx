@@ -12,51 +12,66 @@ const Hero = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Timeline for entrance animations
-      const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
+      // Timeline for entrance animations with smoother easing
+      const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
       // Name character decode animation
       if (nameRef.current) {
         const chars = nameRef.current.querySelectorAll('.char');
         tl.fromTo(
           chars,
-          { opacity: 0, y: 50, rotateX: -90 },
-          { opacity: 1, y: 0, rotateX: 0, duration: 0.8, stagger: 0.03 },
+          { opacity: 0, y: 80, rotateX: -90, scale: 0.8 },
+          { opacity: 1, y: 0, rotateX: 0, scale: 1, duration: 1.2, stagger: 0.05 },
           0.2
         );
       }
 
-      // Title slide up
+      // Title slide up with a slight blur effect revealing
       tl.fromTo(
         titleRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        0.6
+        { opacity: 0, y: 40, filter: 'blur(10px)' },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1 },
+        0.8
       );
 
       // Description fade in
       tl.fromTo(
         descRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        0.8
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1 },
+        1.0
       );
 
       // CTA buttons
       tl.fromTo(
         ctaRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6 },
-        1.2
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8 },
+        1.3
       );
 
       // Social links
       tl.fromTo(
         socialsRef.current?.children || [],
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 },
-        1.4
+        { opacity: 0, y: 20, scale: 0.8 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.1 },
+        1.5
       );
+
+      // Add a subtle floating animation to the entire content block after entrance
+      tl.add(() => {
+        const target = containerRef.current?.querySelector('.max-w-4xl');
+        if (target) {
+          gsap.to(target, {
+            y: -10,
+            duration: 3,
+            ease: 'sine.inOut',
+            yoyo: true,
+            repeat: -1,
+          });
+        }
+      }, '+=0.5');
+
     }, containerRef);
 
     return () => ctx.revert();
@@ -106,7 +121,7 @@ const Hero = () => {
               ref={titleRef}
               className="text-xl sm:text-2xl md:text-3xl text-gradient font-['Space_Grotesk'] font-medium mb-6"
             >
-              AI/ML Engineer & Backend Developer
+              AI/ML Engineer & Agentic AI Specialist
             </p>
 
             {/* Description */}

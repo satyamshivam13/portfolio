@@ -35,7 +35,6 @@ const Projects = () => {
 
     return () => ctx.revert();
   }, []);
-
   const projects = [
     {
       title: 'Multi-Agent Campaign Creator',
@@ -45,6 +44,15 @@ const Projects = () => {
       github: 'https://github.com/satyamshivam13/Multi_Agent_Campaign_Creator',
       featured: true,
       color: '#00ff9d',
+    },
+    {
+      title: 'House Price Prediction',
+      description: 'Production-ready machine learning model for predicting real estate prices. Features a robust preprocessing pipeline and ensemble modeling approach.',
+      image: '/project-house.jpg',
+      tech: ['Python', 'Scikit-learn', 'Pandas', 'ML', 'Jupyter'],
+      github: 'https://github.com/satyamshivam13/House_Price_Prediction',
+      featured: true,
+      color: '#0080ff',
     },
     {
       title: 'RAG Pipeline',
@@ -106,8 +114,8 @@ const Projects = () => {
     gsap.to(card, {
       rotateX: rotateX,
       rotateY: rotateY,
-      duration: 0.3,
-      ease: 'power2.out',
+      duration: 0.4,
+      ease: 'power3.out',
     });
   };
 
@@ -115,8 +123,8 @@ const Projects = () => {
     gsap.to(e.currentTarget, {
       rotateX: 0,
       rotateY: 0,
-      duration: 0.5,
-      ease: 'elastic.out(1, 0.5)',
+      duration: 0.7,
+      ease: 'elastic.out(1, 0.4)',
     });
   };
 
