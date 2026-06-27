@@ -58,9 +58,9 @@ const Projects = () => {
     },
     {
       title: 'HybridAI Syntax Error Detection',
-      description: 'Intelligent tool to detect and explain syntax errors using reasoning-driven LLM prompts. Helps developers understand and fix code issues faster.',
+      description: 'Dual-mode syntax error detection across 5 languages. AST rule-based analysis runs first; a Gradient Boosting classifier catches the rest. 94.18% accuracy, Cohen\'s κ 0.79, ~1ms median inference. FastAPI server, Streamlit UI, CLI. Graceful degradation when the ML model can\'t load.',
       image: '/project-syntax.jpg',
-      tech: ['Python', 'LLM APIs', 'Code Analysis', 'Jupyter'],
+      tech: ['Python', 'AST', 'scikit-learn', 'FastAPI', 'Streamlit'],
       github: 'https://github.com/satyamshivam13/HybridAI_Syntax_Error_Detection',
       demo: 'https://omnisyntax.streamlit.app',
       featured: true,
