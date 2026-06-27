@@ -137,14 +137,19 @@ const About = () => {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#00ff9d] to-[#0080ff]" />
               
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                I'm currently studying <span className="text-[#00ff9d] font-medium">AI and ML</span>, but most of my learning 
-                happens outside the classroom—building real projects. I love working with LLMs, 
-                creating RAG systems, and figuring out how to make AI actually useful.
+                I build AI systems that ship. Not prototypes — production pipelines. Three internships taught me what the gap between a working demo and a real deployment actually looks like.
               </p>
-              
+
+              <p className="text-gray-400 leading-relaxed mb-4">
+                At <span className="text-[#00ff9d] font-medium">Asvix</span> I built the RAG pipeline behind DigiLab, an educational chatbot running 500+ daily queries. At <span className="text-[#00ff9d] font-medium">Cloudily Scripts</span> I cut query latency from 8.2s to 1.7s on a live PDF RAG system. At <span className="text-[#00ff9d] font-medium">IPtechhub</span> I automated deployments that went from 2 hours to 15 minutes.
+              </p>
+
               <p className="text-gray-400 leading-relaxed mb-6">
-                My approach? Keep it simple, make it work, then make it better. Whether it's a chatbot 
-                or a full backend pipeline, I focus on building things people can actually use.
+                I also co-authored research on hybrid AI syntax detection — AST parsing plus a Gradient Boosting classifier across five languages. Preparing it for IEEE submission now.
+              </p>
+
+              <p className="text-gray-400 leading-relaxed mb-6">
+                My approach: make it simple, make it work, then make it better. Whether it's a multi-agent campaign system or a FastAPI backend, I build things people can actually use.
               </p>
 
               <div className="flex flex-wrap gap-3">
