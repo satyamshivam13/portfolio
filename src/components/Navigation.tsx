@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 import { Menu, X } from 'lucide-react';
