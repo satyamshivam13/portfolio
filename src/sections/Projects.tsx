@@ -69,6 +69,7 @@ const Projects = () => {
       image: '/project-syntax.jpg',
       tech: ['Python', 'LLM APIs', 'Code Analysis', 'Jupyter'],
       github: 'https://github.com/satyamshivam13/HybridAI_Syntax_Error_Detection',
+      demo: 'https://omnisyntax.streamlit.app',
       featured: true,
       color: '#00ff9d',
     },
@@ -89,6 +90,16 @@ const Projects = () => {
       github: 'https://github.com/satyamshivam13/LLM_Plagiarism_Checker',
       featured: false,
       color: '#00ff9d',
+    },
+    {
+      title: 'AI Text Detector',
+      description: 'Production-deployed AI-generated text detection system with three Streamlit entry points. Dockerized for reproducible deployment with 44+ commits of iterative refinement.',
+      image: '/project-plagiarism.jpg',
+      tech: ['Python', 'Docker', 'Streamlit', 'NLP', 'LLM', 'Text Classification'],
+      github: 'https://github.com/satyamshivam13/AI_Text_Detector',
+      demo: 'https://plagarismdetector.streamlit.app',
+      featured: true,
+      color: '#0080ff',
     },
     {
       title: 'Customer Churn Prediction',
@@ -232,12 +243,13 @@ const Projects = () => {
                     Code
                   </a>
                   <a
-                    href={project.github}
+                    href={project.demo ?? project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    title={project.demo ? 'Live Demo' : 'View on GitHub'}
                     className="flex items-center justify-center w-10 h-10 bg-white/5 rounded-lg text-gray-300 hover:bg-[#00ff9d] hover:text-[#0a0a0a] transition-all duration-300"
                   >
-                    <ExternalLink size={16} />
+                    {project.demo ? <span className="text-base">🚀</span> : <ExternalLink size={16} />}
                   </a>
                 </div>
               </div>

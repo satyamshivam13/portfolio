@@ -98,7 +98,7 @@ const Experience = () => {
       location: 'Remote',
       period: 'Jun 2025 - Jul 2025',
       description: [
-        'Orchestrated an end-to-end RAG workflow (PDF ingestion to LLM generation) that improved semantic retrieval accuracy by 40%.',
+        'Cut query latency 79% (8.2s → 1.7s) through parallel embedding and semantic chunking; achieved 91% RAG accuracy on 100+ page PDFs.',
         'Engineered production-ready document-based AI chatbots utilizing advanced NLP pipelines and FAISS vector databases.',
         'Architected multi-agent systems for campaign creation, implementing specialized agent orchestration for complex reasoning tasks.',
         'Dockerized all chatbot services to guarantee reproducible deployments and scalable infrastructure.',
@@ -112,7 +112,7 @@ const Experience = () => {
       location: 'Remote',
       period: 'May 2024 - Jul 2024',
       description: [
-        'Implemented rigorous CI/CD workflows utilizing GitHub Actions and Docker Compose, reducing production deployment time by 60%.',
+        'Implemented rigorous CI/CD workflows utilizing GitHub Actions and Docker Compose, reducing production deployment time by 87.5% (2 hours → 15 minutes).',
         'Deployed containerized, auto-scaling ML-backed inference services on AWS EC2 across multiple environments.',
         'Managed cloud infrastructure to support scalable machine learning model inference with optimized resource utilization.',
         'Established continuous performance monitoring pipelines for backend applications and databases.',
