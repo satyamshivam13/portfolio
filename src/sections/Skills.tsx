@@ -77,7 +77,7 @@ const Skills = () => {
       title: 'AI & LLM',
       icon: Brain,
       color: '#0080ff',
-      skills: ['RAG', 'Agentic AI', 'CrewAI', 'Embeddings', 'Prompt Engineering', 'LangChain'],
+      skills: ['RAG', 'Agentic AI', 'CrewAI', 'LangGraph', 'Embeddings', 'Prompt Engineering', 'LangChain', 'RAGAS', 'LLM Evaluation'],
     },
     {
       title: 'Backend',

@@ -38,18 +38,18 @@ const Projects = () => {
   const projects = [
     {
       title: 'Multi-Agent Campaign Creator',
-      description: 'Advanced multi-agent AI system for creating marketing campaigns. Leverages multiple specialized agents to generate, optimize, and coordinate campaign strategies.',
+      description: 'Advanced multi-agent AI system for creating marketing campaigns. LangGraph manages the state machine between agents. CrewAI handles each agent\'s execution.',
       image: '/project-rag.jpg',
-      tech: ['Python', 'Multi-Agent System', 'LLM', 'AI Orchestration'],
+      tech: ['Python', 'LangGraph', 'CrewAI', 'LLM', 'AI Orchestration'],
       github: 'https://github.com/satyamshivam13/Multi_Agent_Campaign_Creator',
       featured: true,
       color: '#00ff9d',
     },
     {
       title: 'RAG Pipeline',
-      description: 'Production-ready Retrieval Augmented Generation pipeline. Implements advanced document processing, vector storage, and intelligent retrieval for LLM applications.',
+      description: '4-agent pipeline: Retriever, Guardrail Agent, Generator, Evaluator. RAGAS evaluation harness measuring faithfulness, context recall, context precision. OpenTelemetry observability. Retry logic via tenacity. Dockerized. GitHub Actions CI.',
       image: '/project-rag.jpg',
-      tech: ['Python', 'RAG', 'Vector DB', 'Embeddings'],
+      tech: ['LangChain', 'FAISS', 'FastAPI', 'Docker', 'Groq', 'RAGAS'],
       github: 'https://github.com/satyamshivam13/RAG_Pipeline',
       featured: true,
       color: '#0080ff',
