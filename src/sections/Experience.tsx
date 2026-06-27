@@ -79,6 +79,20 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: 'AI Developer Intern',
+      company: 'Asvix',
+      location: 'Remote',
+      period: 'Jan 2026 – Apr 2026',
+      description: [
+        'Built the embedding pipeline for DigiLab, an AI chatbot using LangChain + FAISS + Neo4j hybrid RAG — handling 500+ daily queries at 99.2% uptime.',
+        'Reduced hallucination rate from 18% to 11% through context-aware response modules and iterative prompt refinement.',
+        'Improved medical query relevance by 23% using optimised FAISS vector retrieval and BM25 hybrid search.',
+        'Integrated LLM evaluation metrics (faithfulness, context recall) for data-driven prompt iteration.',
+      ],
+      tech: ['Python', 'LangChain', 'FAISS', 'Neo4j', 'LLM', 'RAG', 'Hybrid Search'],
+      color: '#a855f7',
+    },
+    {
       title: 'AI Chatbot Development Intern',
       company: 'Cloudily Scripts',
       location: 'Remote',
