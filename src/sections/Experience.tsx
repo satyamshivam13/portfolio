@@ -97,7 +97,7 @@ const Experience = () => {
     {
       title: 'AI Chatbot Development Intern',
       company: 'Cloudily Scripts',
-      location: 'Remote',
+      location: 'On-site',
       period: 'Jun 2025 - Jul 2025',
       description: [
         'Cut query latency 79% (8.2s → 1.7s) through parallel embedding and semantic chunking; achieved 91% RAG accuracy on 100+ page PDFs.',
