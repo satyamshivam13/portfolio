@@ -187,12 +187,12 @@ const Hero = () => {
                 <p className="text-white text-sm font-medium">AI/ML Engineer</p>
               </div>
               <div>
-                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wider font-semibold">Experience</p>
-                <p className="text-white text-sm font-medium">1+ Years</p>
+                <p className="text-gray-500 text-xs mb-1 uppercase tracking-wider font-semibold">Internships</p>
+                <p className="text-white text-sm font-medium">3</p>
               </div>
               <div>
                 <p className="text-gray-500 text-xs mb-1 uppercase tracking-wider font-semibold">Stack</p>
-                <p className="text-[#00ff9d] text-sm font-medium">Python, React, AWS</p>
+                <p className="text-[#00ff9d] text-sm font-medium">Python · LangChain · FastAPI</p>
               </div>
               <div>
                 <p className="text-gray-500 text-xs mb-1 uppercase tracking-wider font-semibold">Availability</p>
