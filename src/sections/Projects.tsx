@@ -82,6 +82,7 @@ const Projects = () => {
       image: '/project-rag.jpg',
       tech: ['Python', 'FAISS', 'Embeddings', 'LLM APIs'],
       github: 'https://github.com/satyamshivam13/PDF_RAG_Chatbot',
+      demo: 'https://pdfragchatbot-01.streamlit.app',
       featured: true,
       color: '#0080ff',
     },
