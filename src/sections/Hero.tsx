@@ -148,6 +148,7 @@ const Hero = () => {
               </button>
               <a
                 href="/resume.pdf"
+                download
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 sm:px-8 sm:py-4 border border-white/20 text-white font-semibold rounded-lg hover:border-[#00ff9d] hover:text-[#00ff9d] transition-all duration-300 text-sm sm:text-base"

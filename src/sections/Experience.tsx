@@ -112,8 +112,8 @@ const Experience = () => {
       location: 'Remote',
       period: 'May 2024 - Jul 2024',
       description: [
-        'Implemented rigorous CI/CD workflows utilizing GitHub Actions and Docker Compose, reducing production deployment time by 87.5% (2 hours → 15 minutes).',
-        'Deployed containerized, auto-scaling ML-backed inference services on AWS EC2 across multiple environments.',
+        'Deployed containerized ML inference services on AWS EC2 with auto-scaling; handled 500+ daily requests at 99.5% uptime and cut infrastructure costs 32%.',
+        'Automated CI/CD via GitHub Actions; deployment time dropped 87.5% (2 hrs → 15 min); cold-start improved from 45s to 8s.',
       ],
       tech: ['AWS', 'Docker', 'CI/CD', 'ML Deployment', 'GitHub Actions'],
       color: '#0080ff',

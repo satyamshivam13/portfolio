@@ -87,10 +87,10 @@ const Projects = () => {
       color: '#0080ff',
     },
     {
-      title: 'Customer Churn Prediction',
-      description: 'XGBoost churn model reaching 0.868 ROC AUC, served through a FastAPI endpoint and Dockerized for reproducible deployment. Includes data-drift monitoring to flag model degradation over time.',
+      title: 'Customer Churn MLOps Pipeline',
+      description: 'End-to-end ML pipeline with a 3-model benchmark (LR 0.849, RF 0.861, XGBoost 0.868 ROC AUC), served via a FastAPI REST API and Dockerized for reproducible deployment. Batch prediction endpoint with data-drift monitoring.',
       image: '/project-churn.jpg',
-      tech: ['Python', 'XGBoost', 'FastAPI', 'Docker', 'Drift Monitoring'],
+      tech: ['XGBoost', 'FastAPI', 'Docker', 'scikit-learn', 'Model Monitoring'],
       github: 'https://github.com/satyamshivam13/Customer_Churn_Prediction',
       featured: false,
       color: '#0080ff',
