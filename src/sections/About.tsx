@@ -139,7 +139,7 @@ const About = () => {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#00ff9d] to-[#0080ff]" />
               
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                I build AI systems that ship. Not prototypes — production pipelines. Three internships taught me what the gap between a working demo and a real deployment actually looks like.
+                I build AI systems that ship. Three internships taught me what the gap between a working demo and a real deployment actually looks like.
               </p>
 
               <p className="text-gray-400 leading-relaxed mb-4">
