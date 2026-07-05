@@ -100,12 +100,10 @@ const Experience = () => {
       location: 'On-site',
       period: 'Jun 2025 - Jul 2025',
       description: [
-        'Cut query latency 79% (8.2s → 1.7s) through parallel embedding and semantic chunking; achieved 91% RAG accuracy on 100+ page PDFs.',
-        'Engineered production-ready document-based AI chatbots utilizing advanced NLP pipelines and FAISS vector databases.',
-        'Architected multi-agent systems for campaign creation, implementing specialized agent orchestration for complex reasoning tasks.',
-        'Dockerized all chatbot services to guarantee reproducible deployments and scalable infrastructure.',
+        'Built a production RAG pipeline (FAISS IVF128 indexing, cross-encoder reranking, BM25 dense retrieval) that processed 100+ page PDFs at 91% accuracy and cut support tickets 35%.',
+        'Cut query latency 79% (8.2s → 1.7s) with parallel embedding and semantic chunking; Dockerized the stack and reduced image size 60% (2.1 GB → 840 MB).',
       ],
-      tech: ['Python', 'LLMs', 'RAG', 'Docker', 'Multi-Agent', 'FAISS'],
+      tech: ['Python', 'LLMs', 'RAG', 'Docker', 'FAISS'],
       color: '#00ff9d',
     },
     {
@@ -116,8 +114,6 @@ const Experience = () => {
       description: [
         'Implemented rigorous CI/CD workflows utilizing GitHub Actions and Docker Compose, reducing production deployment time by 87.5% (2 hours → 15 minutes).',
         'Deployed containerized, auto-scaling ML-backed inference services on AWS EC2 across multiple environments.',
-        'Managed cloud infrastructure to support scalable machine learning model inference with optimized resource utilization.',
-        'Established continuous performance monitoring pipelines for backend applications and databases.',
       ],
       tech: ['AWS', 'Docker', 'CI/CD', 'ML Deployment', 'GitHub Actions'],
       color: '#0080ff',

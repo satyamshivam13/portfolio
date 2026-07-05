@@ -261,7 +261,7 @@ const Contact = () => {
         <footer className="mt-16 text-center">
           <div className="flex items-center justify-center gap-2 text-gray-500 text-sm mb-4">
             <span>Built with</span>
-            <span className="text-[#00ff9d]">React</span>
+            <span className="text-[#00ff9d]">Next.js 15</span>
             <span>+</span>
             <span className="text-[#0080ff]">TypeScript</span>
             <span>+</span>
