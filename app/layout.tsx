@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   keywords: ['AI Engineer', 'Machine Learning', 'LLM', 'RAG', 'Python', 'Multi-Agent Systems', 'Satyam Shivam'],
   authors: [{ name: 'Satyam Shivam' }],
   robots: 'index, follow',
+  verification: {
+    google: 'PA6O9rx25GJKqBxQPfG4FsOanshkS4UTPiXCMP19eJY',
+  },
   openGraph: {
     type: 'website',
     url: 'https://usersatyam.vercel.app/',
