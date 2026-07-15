@@ -64,7 +64,7 @@ const personSchema = {
   name: 'Satyam Shivam',
   jobTitle: 'AI Engineer',
   url: 'https://usersatyam.vercel.app',
-  sameAs: ['https://github.com/satyamshivam13', 'https://www.linkedin.com/in/usersatyam/'],
+  sameAs: ['https://github.com/satyamshivam13', 'https://www.linkedin.com/in/satyam-shivam-ai/'],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

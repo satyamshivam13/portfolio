@@ -8,7 +8,7 @@ const EMAIL = 'shivamsatyam35@gmail.com';
 
 const socials = [
   { name: 'GitHub', handle: '@satyamshivam13', href: 'https://github.com/satyamshivam13', Icon: Github },
-  { name: 'LinkedIn', handle: '/in/usersatyam', href: 'https://www.linkedin.com/in/usersatyam/', Icon: Linkedin },
+  { name: 'LinkedIn', handle: '/in/satyam-shivam-ai', href: 'https://www.linkedin.com/in/satyam-shivam-ai/', Icon: Linkedin },
   { name: 'Email', handle: EMAIL, href: `mailto:${EMAIL}`, Icon: Mail },
 ];
 

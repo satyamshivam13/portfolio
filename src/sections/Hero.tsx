@@ -55,7 +55,7 @@ const Hero = () => {
               <div className="ml-1 flex items-center gap-1">
                 {[
                   { Icon: Github, href: 'https://github.com/satyamshivam13', label: 'GitHub' },
-                  { Icon: Linkedin, href: 'https://www.linkedin.com/in/usersatyam/', label: 'LinkedIn' },
+                  { Icon: Linkedin, href: 'https://www.linkedin.com/in/satyam-shivam-ai/', label: 'LinkedIn' },
                   { Icon: Mail, href: 'mailto:shivamsatyam35@gmail.com', label: 'Email' },
                 ].map(({ Icon, href, label }) => (
                   <a

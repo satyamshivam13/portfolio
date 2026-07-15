@@ -15,8 +15,8 @@ const Projects = () => {
             Things I&apos;ve shipped.
           </h2>
           <p className="max-w-sm text-sm leading-relaxed text-muted">
-            Seven public repos — RAG, agents, ML, and the eval harnesses that keep them honest.
-            The first four have full case studies.
+            Eight projects — RAG, agents, fine-tuning, ML, and the eval harnesses that keep
+            them honest. Each one has a full case study.
           </p>
         </div>
       </Reveal>
