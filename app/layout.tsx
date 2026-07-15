@@ -1,8 +1,30 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
+import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google';
+import { ThemeProvider } from '../src/components/ThemeProvider';
 import '../src/index.css';
 
+const display = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+  axes: ['opsz', 'SOFT'],
+});
+
+const sans = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://usersatyam.vercel.app'),
   title: 'Satyam Shivam - AI/ML Engineer | Portfolio',
   description:
     'AI/ML Engineer specializing in LLM systems, RAG pipelines, and backend architecture. Explore my projects in multi-agent systems, machine learning, and AI applications.',
@@ -29,6 +51,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FAFAF7' },
+    { media: '(prefers-color-scheme: dark)', color: '#0C0C0D' },
+  ],
+};
+
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -40,16 +69,22 @@ const personSchema = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${display.variable} ${sans.variable} ${mono.variable}`}
+    >
       <head>
-        <meta name="theme-color" content="#00ff9d" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
-      <body>{children}</body>
+      <body className="min-h-screen bg-bg font-sans text-ink antialiased">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -5,7 +5,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 
-import NeuralBackground from './components/NeuralBackground';
 import Navigation from './components/Navigation';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -20,48 +19,45 @@ function App() {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    // Initialize Lenis smooth scroll
-    lenisRef.current = new Lenis({
-      duration: 1.2,
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
+
+    const lenis = new Lenis({
+      duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
       smoothWheel: true,
     });
+    lenisRef.current = lenis;
 
-    // Connect Lenis to GSAP ScrollTrigger
-    lenisRef.current.on('scroll', ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenisRef.current?.raf(time * 1000);
-    });
-
+    lenis.on('scroll', ScrollTrigger.update);
+    const raf = (time: number) => lenis.raf(time * 1000);
+    gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
 
     return () => {
-      lenisRef.current?.destroy();
-      gsap.ticker.remove((time) => {
-        lenisRef.current?.raf(time * 1000);
-      });
+      gsap.ticker.remove(raf);
+      lenis.destroy();
     };
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#0a0a0a]">
-      {/* Neural Network Background */}
-      <NeuralBackground />
-      
-      {/* Noise Overlay */}
-      <div className="noise-overlay" />
-      
-      {/* Navigation */}
+    <div className="relative min-h-screen bg-bg">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:border focus:border-hairline focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:text-ink"
+      >
+        Skip to content
+      </a>
+
+      <div className="pointer-events-none fixed inset-0 -z-10 dot-grid" aria-hidden="true" />
+
       <Navigation />
-      
-      {/* Main Content */}
-      <main className="relative z-10">
+
+      <main id="main" className="relative">
         <Hero />
-        <About />
-        <Experience />
         <Projects />
+        <Experience />
+        <About />
         <Skills />
         <Contact />
       </main>
