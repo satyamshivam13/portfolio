@@ -332,51 +332,6 @@ export const projects: Project[] = [
       ],
     },
   },
-  {
-    slug: 'pdf-rag-chatbot',
-    title: 'PDF RAG Chatbot',
-    tagline: 'Upload a PDF, get streamed, source-grounded answers — ChromaDB retrieval with a web-search fallback.',
-    year: '2026',
-    tags: ['Python', 'ChromaDB', 'FastAPI', 'Streamlit', 'Groq'],
-    github: 'https://github.com/satyamshivam13/PDF_RAG_Chatbot',
-    demo: 'https://pdfragchatbot-01.streamlit.app',
-    featured: true,
-    caseStudy: {
-      problem:
-        'Non-technical users want to ask questions of their own documents without managing LLMs or GPUs. This streams grounded answers from an uploaded file, and falls back to web search when the document can’t answer.',
-      approach: [
-        'Ingestion: PyMuPDF parses PDF/TXT/JSON; 1000-char chunks (150 overlap) embedded with all-MiniLM-L6-v2.',
-        'Retrieval: ChromaDB k-NN with MD5 de-duplication to skip re-embedding duplicate content.',
-        'Response: Groq llama-3.1-8b-instant generates from context; tokens stream to the UI.',
-        'DuckDuckGo fallback when the uploaded document doesn’t answer the question.',
-      ],
-      architecture: [
-        'Upload PDF / TXT / JSON → PyMuPDF',
-        'Chunk + all-MiniLM-L6-v2 embeddings',
-        'ChromaDB k-NN + MD5 de-dup',
-        'Groq llama-3.1-8b-instant (streamed)',
-        'DuckDuckGo fallback',
-      ],
-      challenges: [
-        'Avoiding redundant embedding work with content-hash de-duplication.',
-        'Graceful degradation — a friendly message when the API key is missing, web fallback when the doc falls short.',
-      ],
-      results: [
-        { label: 'Parsing', value: 'PyMuPDF' },
-        { label: 'Vector store', value: 'ChromaDB + dedup' },
-        { label: 'Streaming', value: 'token-by-token' },
-        { label: 'Fallback', value: 'DuckDuckGo' },
-      ],
-      features: [
-        'Upload .pdf / .txt / .json',
-        'Token streaming in UI and API',
-        'Conversational memory',
-        'Content-hash de-duplication',
-        'Cloud-native (Groq; no local GPU)',
-      ],
-      note: 'A product-focused demo — no formal benchmark; the emphasis is UX and graceful degradation.',
-    },
-  },
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);

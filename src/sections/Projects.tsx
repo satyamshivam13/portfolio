@@ -15,7 +15,7 @@ const Projects = () => {
             Things I&apos;ve shipped.
           </h2>
           <p className="max-w-sm text-sm leading-relaxed text-muted">
-            Eight projects — RAG, agents, fine-tuning, ML, and the eval harnesses that keep
+            Seven projects — RAG, agents, fine-tuning, ML, and the eval harnesses that keep
             them honest. Each one has a full case study.
           </p>
         </div>
@@ -23,7 +23,13 @@ const Projects = () => {
 
       <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-hairline bg-hairline sm:grid-cols-2">
         {projects.map((p, i) => (
-          <Reveal key={p.slug} delay={(i % 2) * 60} className="flex">
+          <Reveal
+            key={p.slug}
+            delay={(i % 2) * 60}
+            className={`flex ${
+              i === projects.length - 1 && projects.length % 2 === 1 ? 'sm:col-span-2' : ''
+            }`}
+          >
             <article className="group relative flex w-full flex-col bg-surface p-6 transition-colors hover:bg-surface-2 sm:p-7">
               <div className="flex items-baseline justify-between gap-4">
                 <h3 className="font-display text-xl font-medium text-ink">
