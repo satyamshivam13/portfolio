@@ -43,7 +43,7 @@ const Navigation = () => {
           }}
           className="font-mono text-sm font-medium tracking-tight text-ink transition-colors hover:text-accent"
         >
-          satyam<span className="text-accent-strong">.</span>shivam
+          satyam<span className="text-accent-strong">.</span>
         </a>
 
         <div className="flex items-center gap-1">

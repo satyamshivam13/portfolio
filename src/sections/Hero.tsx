@@ -17,7 +17,7 @@ const Hero = () => {
         {/* Left: thesis */}
         <div className="lg:col-span-7">
           <Reveal>
-            <p className="eyebrow">Satyam Shivam · AI/ML Engineer</p>
+            <p className="eyebrow">Satyam · AI/ML Engineer</p>
           </Reveal>
 
           <Reveal delay={60}>

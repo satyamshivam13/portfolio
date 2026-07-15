@@ -89,7 +89,7 @@ const Contact = () => {
       </Reveal>
 
       <footer className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-hairline pt-8 text-xs text-muted sm:flex-row">
-        <p className="tabular">© {new Date().getFullYear()} Satyam Shivam</p>
+        <p className="tabular">© {new Date().getFullYear()} Satyam</p>
         <p className="tabular">Next.js · TypeScript · Tailwind · deployed on Vercel</p>
       </footer>
     </section>
