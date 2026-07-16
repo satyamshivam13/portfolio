@@ -1,5 +1,3 @@
-'use client';
-
 import { ArrowUpRight } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import { experience } from '../data/experience';

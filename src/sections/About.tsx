@@ -1,5 +1,3 @@
-'use client';
-
 import Reveal from '../components/Reveal';
 
 const facts: { k: string; v: string }[] = [

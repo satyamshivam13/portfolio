@@ -1,5 +1,3 @@
-'use client';
-
 import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import Reveal from '../components/Reveal';
 

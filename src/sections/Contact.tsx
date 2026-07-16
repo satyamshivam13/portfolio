@@ -1,8 +1,6 @@
-'use client';
-
-import { useState } from 'react';
-import { ArrowUpRight, Check, Copy, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import Reveal from '../components/Reveal';
+import CopyEmailButton from '../components/CopyEmailButton';
 
 const EMAIL = 'shivamsatyam35@gmail.com';
 
@@ -13,18 +11,6 @@ const socials = [
 ];
 
 const Contact = () => {
-  const [copied, setCopied] = useState(false);
-
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(EMAIL);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      /* clipboard unavailable */
-    }
-  };
-
   return (
     <section id="contact" className="mx-auto max-w-content scroll-mt-24 px-6 py-24 lg:py-28">
       <Reveal>
@@ -46,15 +32,7 @@ const Contact = () => {
             >
               {EMAIL}
             </a>
-            <button
-              type="button"
-              onClick={copy}
-              aria-label="Copy email address"
-              className="inline-flex w-fit items-center gap-1.5 rounded-md border border-hairline px-3 py-1.5 text-xs text-muted transition-colors hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            >
-              {copied ? <Check size={13} /> : <Copy size={13} />}
-              {copied ? 'Copied' : 'Copy'}
-            </button>
+            <CopyEmailButton email={EMAIL} />
           </div>
 
           {/* Socials */}

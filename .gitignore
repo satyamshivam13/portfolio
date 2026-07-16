@@ -48,3 +48,6 @@ coverage
 
 # OS files
 Thumbs.db
+
+# TypeScript incremental build info
+tsconfig.tsbuildinfo

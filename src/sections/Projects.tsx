@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, Github } from 'lucide-react';
 import Reveal from '../components/Reveal';
