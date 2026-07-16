@@ -4,11 +4,13 @@ import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google';
 import { ThemeProvider } from '../src/components/ThemeProvider';
 import '../src/index.css';
 
+// Every heading uses a single weight (500), so ship one static instance
+// instead of the full variable range — the display face was 118 kB.
 const display = Fraunces({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
-  axes: ['opsz', 'SOFT'],
+  weight: ['500'],
 });
 
 const sans = Inter({
@@ -21,6 +23,7 @@ const mono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
   display: 'swap',
+  weight: ['400', '500'],
 });
 
 export const metadata: Metadata = {
